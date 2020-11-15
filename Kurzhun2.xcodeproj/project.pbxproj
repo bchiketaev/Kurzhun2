@@ -13,6 +13,7 @@
 		285EB1DD25597783006BF891 /* FirebaseCollectionReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285EB1DC25597783006BF891 /* FirebaseCollectionReference.swift */; };
 		285EB1E225597F11006BF891 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285EB1E125597F11006BF891 /* Category.swift */; };
 		285EB1EA25598178006BF891 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285EB1E925598178006BF891 /* Constants.swift */; };
+		285EB2102560FB86006BF891 /* DataFromUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285EB20F2560FB86006BF891 /* DataFromUrl.swift */; };
 		28893F7425592940005F1B62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28893F7325592940005F1B62 /* AppDelegate.swift */; };
 		28893F7625592940005F1B62 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28893F7525592940005F1B62 /* SceneDelegate.swift */; };
 		28893F7B25592940005F1B62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28893F7925592940005F1B62 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 		285EB1DC25597783006BF891 /* FirebaseCollectionReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseCollectionReference.swift; sourceTree = "<group>"; };
 		285EB1E125597F11006BF891 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		285EB1E925598178006BF891 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		285EB20F2560FB86006BF891 /* DataFromUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFromUrl.swift; sourceTree = "<group>"; };
 		28893F7025592940005F1B62 /* Kurzhun2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kurzhun2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28893F7325592940005F1B62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28893F7525592940005F1B62 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 			children = (
 				285EB1DC25597783006BF891 /* FirebaseCollectionReference.swift */,
 				285EB1E925598178006BF891 /* Constants.swift */,
+				285EB20F2560FB86006BF891 /* DataFromUrl.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 				285EB1DD25597783006BF891 /* FirebaseCollectionReference.swift in Sources */,
 				285EB1D22559332C006BF891 /* CategoryCollectionViewController.swift in Sources */,
 				285EB1EA25598178006BF891 /* Constants.swift in Sources */,
+				285EB2102560FB86006BF891 /* DataFromUrl.swift in Sources */,
 				28893F7625592940005F1B62 /* SceneDelegate.swift in Sources */,
 				285EB1E225597F11006BF891 /* Category.swift in Sources */,
 			);

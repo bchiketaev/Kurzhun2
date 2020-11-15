@@ -39,7 +39,7 @@ import Foundation
 //    return NSDictionary(objects: [category.id, category.name, category.imageName], forKeys: [kOBJECTID as NSCopying, kNAME as NSCopying, kIIMAGENAME as NSCopying])
 //}
 
-struct Category: Codable {
+struct Category: Decodable {
     
     var id: Int
     var nameEn: String

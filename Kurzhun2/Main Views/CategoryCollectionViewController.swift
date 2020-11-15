@@ -11,25 +11,33 @@ import UIKit
 
 class CategoryCollectionViewController: UICollectionViewController {
 
-    //MARK: Vars
     
-    var categoryArray: [Category] = []
+    //MARK: Vars
+    var dataFromUrl = DataFromUrl()
+  //  var categoryArray: [Category] = []
+
     private let sectionInsets = UIEdgeInsets(top: 40.0, left: 20.0, bottom: 40.0, right: 20.0)
     private let itemsPerRow: CGFloat = 2
     
+    
+    
     override func viewDidLoad() {
             super.viewDidLoad()
-            
+        dataFromUrl.getAndParseData {
+            self.collectionView.reloadData()
+        }
+        collectionView.delegate = self
+        collectionView.dataSource = self
         
         }
     
-
-
     // MARK: UICollectionViewDataSource
+    
+    
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 
-        return 15
+        return dataFromUrl.category.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -57,53 +65,57 @@ class CategoryCollectionViewController: UICollectionViewController {
         
         navigationItem.titleView = imageView
         
-        getAndParseData()
+        print(dataFromUrl.category.count)
+        
     }
-    
-    func getAndParseData () {
-        //Hit the API endpoint
-        
-        
-        let urlString = "https://kurjun.herokuapp.com/api/item/getcategory/?format=json"
-        
-        let url = URL(string: urlString)
-        
-        guard url != nil else {
-            return
-        }
-        
-        let session = URLSession.shared
-        
-        let dataTask = session.dataTask(with: url!) { (data, response, error) in
-            
-            //Check for errors
-            if error == nil && data != nil {
-
-                // Parse JSON
-                let decoder = JSONDecoder()
-                
-                do {
-                    
-                    
-                    let category = try decoder.decode([Category].self, from: data!)
-                    self.categoryArray = category
-
-                    
-                    print(self.categoryArray)
-                    print(self.categoryArray.count)
-
-                }
-                catch {
-                    print("Error in JSON parsing")
-                }
-            }
-        }
-        
-        // Make the API Call
-        dataTask.resume()
-    }
-    
 }
+    
+//    func getAndParseData () {
+//        //Hit the API endpoint
+//
+//
+//        let urlString = "https://kurjun.herokuapp.com/api/item/getcategory/?format=json"
+//
+//        let url = URL(string: urlString)
+//
+//        guard url != nil else {
+//            return
+//        }
+//
+//        let session = URLSession.shared
+//
+//        let dataTask = session.dataTask(with: url!) { (data, response, error) in
+//
+//            //Check for errors
+//            if error == nil && data != nil {
+//
+//                // Parse JSON
+//                let decoder = JSONDecoder()
+//
+//                do {
+//
+//
+//                    let category = try decoder.decode([Category].self, from: data!)
+//                    self.categoryArray = category
+//
+//
+//
+//                    print(self.categoryArray)
+//                    print(self.categoryArray.count)
+//
+//
+//                }
+//                catch {
+//                    print("Error in JSON parsing")
+//                }
+//            }
+//        }
+//
+//        // Make the API Call
+//        dataTask.resume()
+//    }
+    
+
 
 extension CategoryCollectionViewController: UICollectionViewDelegateFlowLayout {
     
