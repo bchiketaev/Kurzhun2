@@ -14,10 +14,10 @@ class CategoryCollectionViewController: UICollectionViewController {
     
     //MARK: Vars
     var dataFromUrl = DataFromUrl()
-  //  var categoryArray: [Category] = []
 
     //MARK: Conf for cells
-    private let sectionInsets = UIEdgeInsets(top: 40.0, left: 20.0, bottom: 40.0, right: 20.0)
+    
+    private let sectionInsets = UIEdgeInsets(top: 10.0, left: 10.0, bottom: 10.0, right: 10.0)
     private let itemsPerRow: CGFloat = 2
     
     
@@ -26,33 +26,6 @@ class CategoryCollectionViewController: UICollectionViewController {
             super.viewDidLoad()
         
         }
-    
-    // MARK: UICollectionViewDataSource
-    
-    
-
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-
-        return dataFromUrl.category.count
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as? CategoryCollectionViewCell else {
-            fatalError("Unable to dequeue PersonCell"   )
-        }
-        
-        cell.generateCell(dataFromUrl.category[indexPath.row])
-   
-        return cell
-    }
-    
-    //MARK: UICollectionView Delegate
-    
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        performSegue(withIdentifier: "categoryToBrandsSeg", sender: dataFromUrl.category[indexPath.row])
-    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -82,14 +55,52 @@ class CategoryCollectionViewController: UICollectionViewController {
         
     }
     
+    // MARK: UICollectionViewDataSource
+    
+    
+
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+
+        return dataFromUrl.categoryArray.count
+    }
+
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as? CategoryCollectionViewCell else {
+            fatalError("Unable to dequeue PersonCell"   )
+        }
+        cell.layer.cornerRadius = 6
+        cell.layer.borderWidth = 1.0
+        cell.layer.borderColor = UIColor.gray.cgColor
+            
+        cell.layer.shadowColor = UIColor.black.cgColor
+        cell.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+        cell.layer.shadowRadius = 2.0
+        cell.layer.shadowOpacity = 1.0
+        cell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds, cornerRadius: cell.layer.cornerRadius).cgPath
+        
+        cell.generateCell(dataFromUrl.categoryArray[indexPath.row])
+   
+        return cell
+    }
+    
+    //MARK: UICollectionView Delegate
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        performSegue(withIdentifier: "categoryToBrandsSeg", sender: dataFromUrl.categoryArray[indexPath.row])
+    }
+    
+    
+    
     //MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+
         if segue.identifier == "categoryToBrandsSeg" {
             let vc = segue.destination as! BrandsCollectionViewController
-            vc.bcategory = sender as! Category
+            vc.category = sender as! Category
         }
-        
+
     }
     
 }
