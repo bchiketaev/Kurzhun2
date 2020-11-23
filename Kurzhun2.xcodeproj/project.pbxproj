@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2820F4F2256BAD7100696CBB /* RegistrationViewHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2820F4F1256BAD7100696CBB /* RegistrationViewHostingController.swift */; };
+		2824469F256AF62800C00E05 /* LoginPageViewHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824469E256AF62800C00E05 /* LoginPageViewHostingController.swift */; };
 		285EB1D22559332C006BF891 /* CategoryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285EB1D12559332C006BF891 /* CategoryCollectionViewController.swift */; };
 		285EB1D725595B92006BF891 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285EB1D625595B92006BF891 /* CategoryCollectionViewCell.swift */; };
 		285EB1DA25597536006BF891 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 285EB1D925597536006BF891 /* GoogleService-Info.plist */; };
@@ -26,6 +28,8 @@
 
 /* Begin PBXFileReference section */
 		220099DAA98060D53AB64823 /* Pods-Kurzhun2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kurzhun2.release.xcconfig"; path = "Target Support Files/Pods-Kurzhun2/Pods-Kurzhun2.release.xcconfig"; sourceTree = "<group>"; };
+		2820F4F1256BAD7100696CBB /* RegistrationViewHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewHostingController.swift; sourceTree = "<group>"; };
+		2824469E256AF62800C00E05 /* LoginPageViewHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewHostingController.swift; sourceTree = "<group>"; };
 		285EB1D12559332C006BF891 /* CategoryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewController.swift; sourceTree = "<group>"; };
 		285EB1D625595B92006BF891 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		285EB1D925597536006BF891 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -71,6 +75,8 @@
 			children = (
 				285EB1D12559332C006BF891 /* CategoryCollectionViewController.swift */,
 				285EB21425622CFB006BF891 /* BrandsCollectionViewController.swift */,
+				2824469E256AF62800C00E05 /* LoginPageViewHostingController.swift */,
+				2820F4F1256BAD7100696CBB /* RegistrationViewHostingController.swift */,
 			);
 			path = "Main Views";
 			sourceTree = "<group>";
@@ -262,9 +268,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2820F4F2256BAD7100696CBB /* RegistrationViewHostingController.swift in Sources */,
 				285EB1D725595B92006BF891 /* CategoryCollectionViewCell.swift in Sources */,
 				285EB21C256245D8006BF891 /* DownloadBrands.swift in Sources */,
 				285EB223256283F8006BF891 /* BrandsCollectionViewCell.swift in Sources */,
+				2824469F256AF62800C00E05 /* LoginPageViewHostingController.swift in Sources */,
 				28893F7425592940005F1B62 /* AppDelegate.swift in Sources */,
 				285EB1D22559332C006BF891 /* CategoryCollectionViewController.swift in Sources */,
 				285EB2102560FB86006BF891 /* DataFromUrl.swift in Sources */,
