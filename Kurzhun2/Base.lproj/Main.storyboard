@@ -79,7 +79,7 @@
                 <hostingController id="139-vz-YyH" customClass="LoginPageViewHostingController" customModule="Kurzhun2" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L08-hy-zV9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2575" y="-893"/>
+            <point key="canvasLocation" x="2321" y="-665"/>
         </scene>
         <!--Category Collection View Controller-->
         <scene sceneID="giP-z2-bjO">
