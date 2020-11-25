@@ -7,6 +7,7 @@
 
 import UIKit
 import SwiftUI
+import Firebase
 
 
 struct LoginPageView: View {
@@ -31,7 +32,7 @@ struct LoginPageView_Preview: PreviewProvider {
 
 struct LoginPageHome : View {
     
-    @State var email = ""
+    @State var phone = ""
     @State var pass = ""
     @State private var secured: Bool = true
     
@@ -53,12 +54,12 @@ struct LoginPageHome : View {
                         
                         HStack {
                             
-                            TextField("Номер телефона", text: self.$email)
+                            TextField("Номер телефона", text: self.$phone)
                             
                             Image(systemName: "phone")
                                 .resizable()
                                 .frame(width: 20, height: 18)
-                        }
+                        }.keyboardType(.phonePad)
                     }.padding(.horizontal)
                     
                     Divider()
