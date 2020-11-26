@@ -7,9 +7,10 @@
 
 import UIKit
 import Firebase
+import GoogleSignIn
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 
 
 
@@ -18,7 +19,49 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         
+        GIDSignIn.sharedInstance()?.clientID = FirebaseApp.app()?.options.clientID
+        GIDSignIn.sharedInstance()?.delegate = self
+        
         return true
+    }
+
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        
+//        print("User email: \(user.profile.email ?? "No Email")")
+        
+        if error != nil {
+            
+            print(error.localizedDescription)
+            return
+        }
+        
+        let credential = GoogleAuthProvider.credential(withIDToken: user.authentication.idToken, accessToken: user.authentication.accessToken)
+        
+        //Logging to Firebase
+        
+        Auth.auth().signIn(with: credential) { (res, err) in
+        
+        if err != nil {
+            
+            print((err?.localizedDescription)!)
+            return
+        }
+        
+        //User Logged In Successfully...
+        
+        //Sending Notification to UI
+        
+        NotificationCenter.default.post(name: NSNotification.Name("SIGNIN"), object: nil)
+        
+        //Printing Email ID
+            print(res?.user.email)
+            
+        }
+        
+    }
+
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        return GIDSignIn.sharedInstance().handle(url)
     }
 
     // MARK: UISceneSession Lifecycle

@@ -3,34 +3,38 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>595747783297-nsatgjgmv944p5ilqkf440qspcd45ubf.apps.googleusercontent.com</string>
+	<string>755869996694-ttt25dqamocrimg9j9qr6hjd4inan06s.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.595747783297-nsatgjgmv944p5ilqkf440qspcd45ubf</string>
+	<string>com.googleusercontent.apps.755869996694-ttt25dqamocrimg9j9qr6hjd4inan06s</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>755869996694-004srpn7odl5mc3q3pqf048ohtumof7k.apps.googleusercontent.com</string>
 	<key>API_KEY</key>
-	<string>AIzaSyDcXVbxAo_u2mqkonBmQsWh3fDrfGPPmJM</string>
+	<string>AIzaSyAE6I4cJ8KkVfbZ_WKpDPxWDDhviyT2tgs</string>
 	<key>GCM_SENDER_ID</key>
-	<string>595747783297</string>
+	<string>755869996694</string>
+	<key>CFBundleIdentifier</key>
+	<string></string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>Begaaly.Kurzhun2</string>
 	<key>PROJECT_ID</key>
-	<string>realone-b7223</string>
+	<string>kurzhun01-c7924</string>
 	<key>STORAGE_BUCKET</key>
-	<string>realone-b7223.appspot.com</string>
+	<string>kurzhun01-c7924.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_GCM_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:595747783297:ios:6ee4ce8c269cd3e4ed0380</string>
+	<string>1:755869996694:ios:015eb00ae733e6f751d4b7</string>
 	<key>DATABASE_URL</key>
-	<string>https://realone-b7223.firebaseio.com</string>
+	<string>https://kurzhun01-c7924.firebaseio.com</string>
 </dict>
 </plist>

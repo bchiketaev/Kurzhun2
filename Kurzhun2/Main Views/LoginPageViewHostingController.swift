@@ -8,16 +8,42 @@
 import UIKit
 import SwiftUI
 import Firebase
+import GoogleSignIn
 
 
 struct LoginPageView: View {
     
+    @State var user = Auth.auth().currentUser
+    
   var body: some View {
     NavigationView{
         
+        //Updating View Based On User Login
+        
+//        VStack {
+//            
+//            if user != nil {
+//                Check()
+//            }
+//            else {
+//                LoginPageHome()
+//                .navigationBarTitle("")
+//                .navigationBarHidden(true)
+//            }
+//        }
         LoginPageHome()
         .navigationBarTitle("")
         .navigationBarHidden(true)
+        
+    }.onAppear {
+
+        NotificationCenter.default.addObserver(forName: NSNotification.Name("SIGHIN"), object: nil, queue: .main) { (_) in
+
+            //Updating User
+
+            self.user = Auth.auth().currentUser
+        }
+
     }
       
   }
@@ -134,7 +160,12 @@ struct LoginPageHome : View {
                     }.font(.system(size: 12))
                     
                     HStack {
-                        Button(action: {}){
+                        Button(action: {
+                            
+                            GIDSignIn.sharedInstance()?.presentingViewController = UIApplication.shared.windows.first?.rootViewController
+                            
+                            GIDSignIn.sharedInstance()?.signIn()
+                        }){
                             
                             Image("google-logo")
                                 .resizable()
@@ -178,7 +209,29 @@ struct EyeImage: View {
     }
 }
 
-
+struct Check : View {
+    
+    var body: some View {
+        
+        VStack {
+            
+            Text("Logged in As\n\(Auth.auth().currentUser!.email!)")
+                .multilineTextAlignment(.center)
+        }
+    }
+    
+    //LogOut From Firebase
+    
+    //Call This When To Perform LogOut...
+    func logOut() {
+        
+        //Logout From Google...
+        
+        GIDSignIn.sharedInstance()?.signOut()
+        
+        try! Auth.auth().signOut()
+    }
+}
 
 class LoginPageViewHostingController: UIHostingController<LoginPageView> {
 
@@ -188,6 +241,9 @@ class LoginPageViewHostingController: UIHostingController<LoginPageView> {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
     }
 }
     

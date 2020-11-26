@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		2820F4F2256BAD7100696CBB /* RegistrationViewHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2820F4F1256BAD7100696CBB /* RegistrationViewHostingController.swift */; };
+		2820F51A256E8D1A00696CBB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2820F519256E8D1A00696CBB /* GoogleService-Info.plist */; };
 		2824469F256AF62800C00E05 /* LoginPageViewHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824469E256AF62800C00E05 /* LoginPageViewHostingController.swift */; };
 		285EB1D22559332C006BF891 /* CategoryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285EB1D12559332C006BF891 /* CategoryCollectionViewController.swift */; };
 		285EB1D725595B92006BF891 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285EB1D625595B92006BF891 /* CategoryCollectionViewCell.swift */; };
-		285EB1DA25597536006BF891 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 285EB1D925597536006BF891 /* GoogleService-Info.plist */; };
 		285EB1E225597F11006BF891 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285EB1E125597F11006BF891 /* Category.swift */; };
 		285EB2102560FB86006BF891 /* DataFromUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285EB20F2560FB86006BF891 /* DataFromUrl.swift */; };
 		285EB21525622CFB006BF891 /* BrandsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285EB21425622CFB006BF891 /* BrandsCollectionViewController.swift */; };
@@ -29,10 +29,10 @@
 /* Begin PBXFileReference section */
 		220099DAA98060D53AB64823 /* Pods-Kurzhun2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kurzhun2.release.xcconfig"; path = "Target Support Files/Pods-Kurzhun2/Pods-Kurzhun2.release.xcconfig"; sourceTree = "<group>"; };
 		2820F4F1256BAD7100696CBB /* RegistrationViewHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewHostingController.swift; sourceTree = "<group>"; };
+		2820F519256E8D1A00696CBB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2824469E256AF62800C00E05 /* LoginPageViewHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewHostingController.swift; sourceTree = "<group>"; };
 		285EB1D12559332C006BF891 /* CategoryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewController.swift; sourceTree = "<group>"; };
 		285EB1D625595B92006BF891 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
-		285EB1D925597536006BF891 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		285EB1E125597F11006BF891 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		285EB20F2560FB86006BF891 /* DataFromUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFromUrl.swift; sourceTree = "<group>"; };
 		285EB21425622CFB006BF891 /* BrandsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandsCollectionViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +129,7 @@
 		28893F7225592940005F1B62 /* Kurzhun2 */ = {
 			isa = PBXGroup;
 			children = (
+				2820F519256E8D1A00696CBB /* GoogleService-Info.plist */,
 				28893F7325592940005F1B62 /* AppDelegate.swift */,
 				28893F7525592940005F1B62 /* SceneDelegate.swift */,
 				285EB1DF25597E5B006BF891 /* Custom Cells */,
@@ -139,7 +140,6 @@
 				28893F7C25592941005F1B62 /* Assets.xcassets */,
 				28893F7E25592941005F1B62 /* LaunchScreen.storyboard */,
 				28893F8125592941005F1B62 /* Info.plist */,
-				285EB1D925597536006BF891 /* GoogleService-Info.plist */,
 			);
 			path = Kurzhun2;
 			sourceTree = "<group>";
@@ -165,6 +165,7 @@
 				28893F6D25592940005F1B62 /* Frameworks */,
 				28893F6E25592940005F1B62 /* Resources */,
 				F7C72303491377909D2BA7AF /* [CP] Embed Pods Frameworks */,
+				4003545E18F96C9348D46E92 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,7 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28893F8025592941005F1B62 /* LaunchScreen.storyboard in Resources */,
-				285EB1DA25597536006BF891 /* GoogleService-Info.plist in Resources */,
+				2820F51A256E8D1A00696CBB /* GoogleService-Info.plist in Resources */,
 				28893F7D25592941005F1B62 /* Assets.xcassets in Resources */,
 				28893F7B25592940005F1B62 /* Main.storyboard in Resources */,
 			);
@@ -222,6 +223,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4003545E18F96C9348D46E92 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kurzhun2/Pods-Kurzhun2-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kurzhun2/Pods-Kurzhun2-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kurzhun2/Pods-Kurzhun2-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		452CF550F4412834A39FC7DC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
